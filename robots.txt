@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sarahsendsherlove.github.io/tidyquote/sitemap.xml

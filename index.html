@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>House Cleaning Price Calculator (Free) — What to Charge per Job | TidyQuote</title>
+<meta name="description" content="Free house cleaning price calculator for cleaning-business owners. Estimate what to charge for standard, deep, and move-out cleans by square footage or rooms, with frequency discounts and add-ons. No sign-up.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sarahsendsherlove.github.io/tidyquote/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free House Cleaning Price Calculator — What Should You Charge?">
+<meta property="og:description" content="Estimate a fair price for any cleaning job in seconds. Built for independent cleaners and small cleaning businesses.">
+<style>
+  :root{
+    --bg:#f4f7f6; --card:#ffffff; --ink:#142a26; --muted:#5b716c;
+    --accent:#0f9b76; --accent-d:#0c7d5f; --line:#e2ebe8; --soft:#eef6f3;
+    --shadow:0 1px 2px rgba(16,40,34,.06),0 8px 24px rgba(16,40,34,.07);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:680px;margin:0 auto;padding:20px 18px 64px}
+  header{padding:20px 0 8px}
+  .brand{font-weight:700;letter-spacing:-.2px;color:var(--accent-d);font-size:18px;display:flex;align-items:center;gap:8px}
+  .brand svg{width:22px;height:22px}
+  h1{font-size:27px;line-height:1.2;margin:18px 0 8px;letter-spacing:-.5px}
+  .lede{color:var(--muted);font-size:16px;margin:0 0 8px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow);margin:18px 0}
+  label{display:block;font-weight:600;font-size:14px;margin:16px 0 7px}
+  label:first-child{margin-top:0}
+  .hint{font-weight:400;color:var(--muted);font-size:13px}
+  select,input[type=number]{width:100%;padding:13px 12px;font-size:16px;border:1px solid var(--line);
+    border-radius:11px;background:#fff;color:var(--ink);appearance:none;-webkit-appearance:none}
+  input[type=number]:focus,select:focus{outline:2px solid var(--accent);border-color:var(--accent)}
+  .seg{display:flex;gap:8px;flex-wrap:wrap}
+  .seg button{flex:1 1 auto;min-width:88px;padding:12px 10px;border:1px solid var(--line);background:#fff;color:var(--ink);
+    border-radius:11px;font-size:15px;font-weight:600;cursor:pointer}
+  .seg button[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .row{display:flex;gap:12px}
+  .row>div{flex:1}
+  .checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  @media(max-width:460px){.checks{grid-template-columns:1fr}}
+  .chk{display:flex;align-items:center;gap:10px;padding:11px 12px;border:1px solid var(--line);border-radius:11px;font-size:14px;font-weight:500;cursor:pointer;user-select:none}
+  .chk input{width:18px;height:18px;accent-color:var(--accent);margin:0}
+  .chk.on{background:var(--soft);border-color:#bfe3d7}
+  .result{background:linear-gradient(180deg,#0f9b76,#0c7d5f);color:#fff;border-radius:16px;padding:22px;margin:18px 0;text-align:center}
+  .result .big{font-size:40px;font-weight:800;letter-spacing:-1px;margin:2px 0}
+  .result .range{font-size:15px;opacity:.92}
+  .result .per{font-size:13px;opacity:.85;margin-top:6px}
+  .break{margin:12px 0 0;border-top:1px solid var(--line);padding-top:12px;font-size:14px;color:var(--muted)}
+  .break div{display:flex;justify-content:space-between;padding:3px 0}
+  .break b{color:var(--ink);font-weight:600}
+  details{margin:10px 0;border-top:1px solid var(--line);padding-top:12px}
+  summary{font-weight:600;cursor:pointer}
+  .cta{background:#08231c;color:#fff;border-radius:16px;padding:24px;margin:24px 0}
+  .cta h2{margin:0 0 8px;font-size:20px}
+  .cta p{color:#bcd6cd;margin:0 0 14px;font-size:15px}
+  .cta ul{margin:0 0 16px;padding-left:18px;color:#d7ece5;font-size:14px}
+  .cta li{margin:4px 0}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:700;
+    padding:14px 22px;border-radius:12px;font-size:16px}
+  .btn.disabled{background:#5b716c;cursor:not-allowed}
+  .note{font-size:13px;color:var(--muted);margin-top:8px}
+  article{margin-top:32px}
+  article h2{font-size:21px;margin:26px 0 8px;letter-spacing:-.3px}
+  article h3{font-size:17px;margin:20px 0 6px}
+  article p{color:#33433f}
+  footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  a{color:var(--accent-d)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M7 21V10l5-5 5 5v11"/><path d="M10 21v-5h4v5"/></svg>
+      TidyQuote
+    </div>
+  </header>
+
+  <h1>House Cleaning Price Calculator</h1>
+  <p class="lede">Stop guessing what to charge. Enter the job below and get a fair price range in seconds — built for independent cleaners and small cleaning businesses. No sign-up, free.</p>
+
+  <div class="card">
+    <label>How do you want to size the job?</label>
+    <div class="seg" id="mode">
+      <button data-v="sqft" aria-pressed="true">By square footage</button>
+      <button data-v="rooms" aria-pressed="false">By rooms</button>
+    </div>
+
+    <div id="sqftBox">
+      <label>Home size <span class="hint">(square feet)</span></label>
+      <input type="number" id="sqft" min="100" max="20000" step="50" value="1500" inputmode="numeric">
+    </div>
+
+    <div id="roomsBox" style="display:none">
+      <div class="row">
+        <div>
+          <label>Bedrooms</label>
+          <input type="number" id="beds" min="0" max="12" step="1" value="3" inputmode="numeric">
+        </div>
+        <div>
+          <label>Bathrooms</label>
+          <input type="number" id="baths" min="0" max="12" step="0.5" value="2" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+
+    <label>Type of clean</label>
+    <div class="seg" id="type">
+      <button data-v="standard" aria-pressed="true">Standard</button>
+      <button data-v="deep" aria-pressed="false">Deep</button>
+      <button data-v="move" aria-pressed="false">Move in/out</button>
+    </div>
+
+    <label>How often? <span class="hint">(recurring clients pay less per visit)</span></label>
+    <div class="seg" id="freq">
+      <button data-v="once" aria-pressed="true">One-time</button>
+      <button data-v="monthly" aria-pressed="false">Monthly</button>
+      <button data-v="biweekly" aria-pressed="false">Biweekly</button>
+      <button data-v="weekly" aria-pressed="false">Weekly</button>
+    </div>
+
+    <label>Add-ons <span class="hint">(optional extras)</span></label>
+    <div class="checks" id="addons">
+      <label class="chk"><input type="checkbox" data-fee="30" data-k="Inside oven"> Inside oven</label>
+      <label class="chk"><input type="checkbox" data-fee="25" data-k="Inside fridge"> Inside fridge</label>
+      <label class="chk"><input type="checkbox" data-fee="40" data-k="Interior windows"> Interior windows</label>
+      <label class="chk"><input type="checkbox" data-fee="30" data-k="Baseboards (detailed)"> Baseboards</label>
+      <label class="chk"><input type="checkbox" data-fee="20" data-k="Laundry / linens"> Laundry / linens</label>
+      <label class="chk"><input type="checkbox" data-fee="35" data-k="Inside cabinets"> Inside cabinets</label>
+    </div>
+  </div>
+
+  <div class="result" id="result" aria-live="polite">
+    <div class="range" id="line1">Suggested price for this job</div>
+    <div class="big" id="price">$—</div>
+    <div class="range" id="rangeline">Typical range: $— – $—</div>
+    <div class="per" id="perline"></div>
+    <div class="break" id="break"></div>
+  </div>
+
+  <div class="cta">
+    <h2>You priced the job. Now run it like a pro.</h2>
+    <p>The hard part isn't the cleaning — it's the paperwork. The <b>Complete House Cleaning Business Pack</b> gives you every document you need to look legit, get paid, and avoid disputes:</p>
+    <ul>
+      <li>Service Agreement / Cleaning Contract (editable)</li>
+      <li>New Client Intake Form &amp; Walk-through Checklist</li>
+      <li>Standard, Deep &amp; Move-out Cleaning Checklists</li>
+      <li>Price List &amp; Quote/Estimate templates</li>
+      <li>Professional Invoice template</li>
+      <li>Cancellation &amp; No-show Policy</li>
+    </ul>
+    <a class="btn disabled" id="buy" href="#" aria-disabled="true">Get the Pack — coming this week</a>
+    <div class="note" id="cta-note">Drops in a couple of days. Everything is plain, editable, and yours to keep.</div>
+  </div>
+
+  <article>
+    <h2>How much should a house cleaning cost?</h2>
+    <p>Most independent cleaners in the U.S. charge somewhere between <b>$0.08 and $0.13 per square foot</b> for a standard clean, or roughly <b>$25–$50 per hour</b>. A typical 1,500 sq ft home runs about <b>$120–$200</b> for a standard recurring clean, and more for a first-time deep clean. The calculator above uses these common ranges as a starting point — your real number depends on your market, your costs, and how fast you work.</p>
+
+    <h3>Standard vs. deep vs. move-out</h3>
+    <p>A <b>standard clean</b> maintains an already-cared-for home. A <b>deep clean</b> (often the first visit with a new client) costs roughly 1.5–2× more because it covers build-up: baseboards, inside appliances, detailed bathrooms. A <b>move-in/move-out clean</b> is usually the priciest — the home is empty, every surface is in play, and it's often inspected by a landlord.</p>
+
+    <h3>Why recurring clients pay less per visit</h3>
+    <p>A weekly or biweekly client is predictable income and faster to clean once you know the home, so it's normal to discount the per-visit price 10–20% versus a one-time job. You make it up in volume and stability. One-time and first-time deep cleans should always be your highest rate.</p>
+
+    <h3>Don't forget your real costs</h3>
+    <p>The price the calculator shows is revenue, not profit. Before you quote, subtract supplies, travel and gas, insurance, payment fees, and your own taxes. A good rule: know your target hourly take-home, estimate the hours honestly (including the drive), and never quote below your job minimum — most pros set one around $100–$120.</p>
+
+    <h3>How to actually win the job</h3>
+    <p>Price is only half of it. Clients hire the cleaner who looks organized and trustworthy: a clear written quote, a simple service agreement, and a tidy intake process. That's exactly what most solo cleaners are missing — and what the pack above is built to fix.</p>
+
+    <details>
+      <summary>Is this calculator accurate for my area?</summary>
+      <p>It uses national-average U.S. ranges. High cost-of-living metros (e.g. coastal cities) often run 20–40% higher; rural areas can run lower. Treat the number as a starting anchor and adjust to what your local market will bear.</p>
+    </details>
+    <details>
+      <summary>Should I charge hourly or by the job?</summary>
+      <p>Flat per-job pricing is almost always better once you're experienced — clients prefer a known number, and you're rewarded for working efficiently. Hourly makes sense only for unpredictable first-time or hoarding/post-renovation jobs.</p>
+    </details>
+  </article>
+
+  <footer>
+    <p>TidyQuote — free tools for cleaning-business owners. Estimates are guidance based on typical U.S. pricing ranges, not a guarantee of market rates. Nothing here is legal or financial advice.</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var state={mode:"sqft",type:"standard",freq:"once"};
+  function segWire(id,key){
+    var box=document.getElementById(id);
+    box.querySelectorAll("button").forEach(function(b){
+      b.addEventListener("click",function(){
+        box.querySelectorAll("button").forEach(function(x){x.setAttribute("aria-pressed","false")});
+        b.setAttribute("aria-pressed","true");
+        state[key]=b.getAttribute("data-v");
+        if(key==="mode"){
+          document.getElementById("sqftBox").style.display = state.mode==="sqft"?"":"none";
+          document.getElementById("roomsBox").style.display = state.mode==="rooms"?"":"none";
+        }
+        calc();
+      });
+    });
+  }
+  segWire("mode","mode");segWire("type","type");segWire("freq","freq");
+
+  // checkbox styling + recalc
+  document.querySelectorAll("#addons .chk").forEach(function(l){
+    var cb=l.querySelector("input");
+    cb.addEventListener("change",function(){ l.classList.toggle("on",cb.checked); calc(); });
+  });
+  ["sqft","beds","baths"].forEach(function(id){
+    document.getElementById(id).addEventListener("input",calc);
+  });
+
+  var TYPE={standard:1.0,deep:1.65,move:1.95};
+  var FREQ={once:1.0,monthly:0.95,biweekly:0.88,weekly:0.82};
+  var FREQ_LABEL={once:"one-time",monthly:"per monthly visit",biweekly:"per biweekly visit",weekly:"per weekly visit"};
+
+  function money(n){return "$"+Math.round(n).toLocaleString("en-US");}
+
+  function calc(){
+    var base;
+    if(state.mode==="sqft"){
+      var sqft=Math.max(100,Math.min(20000,(+document.getElementById("sqft").value||0)));
+      base = sqft*0.10;                      // $0.10/sqft anchor for standard
+    } else {
+      var beds=Math.max(0,(+document.getElementById("beds").value||0));
+      var baths=Math.max(0,(+document.getElementById("baths").value||0));
+      base = 60 + beds*15 + baths*25;        // base + per-room
+    }
+    base *= TYPE[state.type];
+    base *= FREQ[state.freq];
+
+    var addon=0, addNames=[];
+    document.querySelectorAll("#addons input:checked").forEach(function(cb){
+      addon += (+cb.getAttribute("data-fee"));
+      addNames.push(cb.getAttribute("data-k"));
+    });
+
+    var subtotal = base + addon;
+    var price = Math.max(100, subtotal);     // job minimum floor
+    var low = Math.round(price*0.85/5)*5;
+    var high = Math.round(price*1.18/5)*5;
+
+    document.getElementById("price").textContent = money(price);
+    document.getElementById("rangeline").textContent = "Typical range: "+money(low)+" – "+money(high);
+    document.getElementById("perline").textContent = FREQ_LABEL[state.freq]==="one-time"
+        ? "One-time job"
+        : "Price "+FREQ_LABEL[state.freq]+" (recurring discount applied)";
+
+    var b=document.getElementById("break"); b.innerHTML="";
+    function rowEl(k,v){var d=document.createElement("div");d.innerHTML="<span>"+k+"</span><b>"+v+"</b>";b.appendChild(d);}
+    rowEl(({standard:"Standard",deep:"Deep clean",move:"Move in/out"})[state.type]+" base", money(base));
+    if(addon>0) rowEl("Add-ons ("+addNames.length+")", "+"+money(addon));
+    if(price>subtotal) rowEl("Job minimum applied", money(price));
+  }
+  calc();
+})();
+</script>
+</body>
+</html>
