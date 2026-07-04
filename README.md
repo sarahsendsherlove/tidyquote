@@ -16,6 +16,7 @@ hosted with GitHub Pages from this repo.
 | Deep Cleaning Checklist — room-by-room printable checklist | [Get it](https://sarahsendsherlove.github.io/tidyquote/deep-cleaning-checklist/) |
 | Move-Out Cleaning Checklist — landlord/deposit-ready checklist | [Get it](https://sarahsendsherlove.github.io/tidyquote/move-out-cleaning-checklist/) |
 | Cleaning Client Intake Form — new-client onboarding form | [Get it](https://sarahsendsherlove.github.io/tidyquote/cleaning-client-intake-form/) |
+| Cleaning Invoice Template — free copy-paste invoice that gets you paid on time | [Get it](https://sarahsendsherlove.github.io/tidyquote/cleaning-invoice-template/) |
 
 ## The paid pack
 
