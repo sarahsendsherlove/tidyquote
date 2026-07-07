@@ -18,6 +18,7 @@ hosted with GitHub Pages from this repo.
 | Cleaning Client Intake Form — new-client onboarding form | [Get it](https://sarahsendsherlove.github.io/tidyquote/cleaning-client-intake-form/) |
 | Cleaning Invoice Template — free copy-paste invoice that gets you paid on time | [Get it](https://sarahsendsherlove.github.io/tidyquote/cleaning-invoice-template/) |
 | Cleaning Service Quote Template — free copy-paste quote that wins the job | [Get it](https://sarahsendsherlove.github.io/tidyquote/cleaning-service-quote-template/) |
+| Cleaning Business Name Ideas — 150+ names by style + availability checklist | [Browse](https://sarahsendsherlove.github.io/tidyquote/cleaning-business-name-ideas/) |
 
 ## The paid pack
 
