@@ -20,6 +20,7 @@ hosted with GitHub Pages from this repo.
 | Cleaning Service Quote Template — free copy-paste quote that wins the job | [Get it](https://sarahsendsherlove.github.io/tidyquote/cleaning-service-quote-template/) |
 | Cleaning Business Name Ideas — 150+ names by style + availability checklist | [Browse](https://sarahsendsherlove.github.io/tidyquote/cleaning-business-name-ideas/) |
 | Cleaning Supplies List — complete starter kit with budget + what to skip | [Get it](https://sarahsendsherlove.github.io/tidyquote/cleaning-supplies-list/) |
+| House Cleaning Flyer — printable flyer template + copy that gets calls + where to post | [Get it](https://sarahsendsherlove.github.io/tidyquote/house-cleaning-flyer/) |
 
 ## The paid pack
 
